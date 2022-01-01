@@ -1,0 +1,38 @@
+因为最近写了一些小脚本想上传到github,在此记录一些实用到笔记：
+1.远程与本地分支
+github是有结构的，这种分支结构是非常方便开发者的
+我们在此简要记录一下，在本地敲code之后想要上传到github的过程
+1.创建repo，在GitHub网页上
+在本地安装git，然后和远程仓库链接：
+brew install git
+然后设置ssh，可以自行google
+然后
+git config --global user.name "your name" 
+git config --global user.email "your_email@youremail.com"
+然后就是上传东西。
+
+2.你可以先clone到本地
+git clone xxxxxx
+git init
+git add .
+git status
+git commit -m"xxxx"
+git push origin
+这里可能会涉及到输入账号密码认证失败的情况
+这里有一种开发者模式下面的access token工具
+首先就是在github生成
+然后，创建一个文件存下
+“https://{username}:{password}@github.com”
+git config --global credential.helper store --file ~/这个文件
+然后后面就只需要这样就行了：
+git config --global credential.helper store
+
+
+3.分支就实际上另外开条路，免得把主干线给毁了
+几个常用的command：
+git branch -a显示本地加远程分支
+git branch -r显示远程分支
+git branch xxx建立本地分支
+git checkout 切换分支
+git push origin
+git push xxxx:xxxxx(前面的本地的后面的是远程的)
