@@ -35,4 +35,4 @@ git branch -r显示远程分支
 git branch xxx建立本地分支
 git checkout 切换分支
 git push origin
-git push xxxx:xxxxx(前面的本地的后面的是远程的)
+git push origin learn:test(前面的本地的后面的是远程的)
